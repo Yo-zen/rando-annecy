@@ -1,0 +1,151 @@
+<html><head><base href="randonnees/roc-chere">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Randonnée au Roc de Chère - Annecy</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  h1, h2 {
+    color: #2c3e50;
+  }
+  .header-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .info-box {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .map {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .description {
+    text-align: justify;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body>
+  <h1>Randonnée au Roc de Chère</h1>
+  
+  <img src="roc-chere-panorama.jpg" alt="Vue panoramique depuis le Roc de Chère sur le lac d'Annecy" class="header-image" width="800" height="300">
+  
+  <div class="info-box">
+    <div class="info-item">
+      <span>Difficulté:</span>
+      <span>Facile</span>
+    </div>
+    <div class="info-item">
+      <span>Distance:</span>
+      <span>5 km</span>
+    </div>
+    <div class="info-item">
+      <span>Durée:</span>
+      <span>2h - 2h30</span>
+    </div>
+    <div class="info-item">
+      <span>Dénivelé:</span>
+      <span>150 m</span>
+    </div>
+    <div class="info-item">
+      <span>Point de départ:</span>
+      <span>Plage de Menthon-Saint-Bernard</span>
+    </div>
+  </div>
+
+  <h2>Description</h2>
+  <p class="description">
+    Le Roc de Chère est une réserve naturelle située sur la rive est du lac d'Annecy, offrant une randonnée facile et accessible à tous. Ce promontoire rocheux surplombant le lac propose des paysages variés et des points de vue exceptionnels sur les eaux turquoise du lac et les montagnes environnantes.
+  </p>
+  <p class="description">
+    Le sentier serpente à travers une forêt luxuriante, passant par des falaises calcaires, des zones marécageuses et des prairies fleuries. La diversité des milieux traversés en fait un lieu idéal pour observer la faune et la flore locales. Tout au long du parcours, des panneaux explicatifs vous renseigneront sur la géologie, l'histoire et l'écologie de ce site remarquable.
+  </p>
+
+  <h2>Itinéraire</h2>
+  <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=6.163673400878906%2C45.84423828125%2C6.189765930175781%2C45.85823059082031&amp;layer=mapnik" width="800" height="400"></iframe>
+
+  <h2>Conseils</h2>
+  <ul>
+    <li>Portez des chaussures de marche confortables, même si le sentier est bien aménagé.</li>
+    <li>Emportez de l'eau, surtout en été car il peut faire chaud.</li>
+    <li>Prévoyez un pique-nique pour profiter pleinement des points de vue.</li>
+    <li>N'oubliez pas votre appareil photo pour immortaliser les panoramas.</li>
+    <li>Respectez la nature et ne sortez pas des sentiers balisés pour préserver cet espace protégé.</li>
+  </ul>
+
+  <h2>Galerie</h2>
+  <div class="gallery">
+    <img src="roc-chere-sentier.jpg" alt="Sentier ombragé dans la forêt du Roc de Chère" width="200" height="150">
+    <img src="roc-chere-falaise.jpg" alt="Falaises calcaires du Roc de Chère" width="200" height="150">
+    <img src="roc-chere-flore.jpg" alt="Flore diverse du Roc de Chère" width="200" height="150">
+    <img src="roc-chere-vue-lac.jpg" alt="Vue sur le lac d'Annecy depuis le Roc de Chère" width="200" height="150">
+  </div>
+
+  <script>
+    // Ajout d'interactivité pour la galerie (exemple : agrandissement des images au clic)
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        const fullscreenImg = document.createElement('div');
+        fullscreenImg.style.position = 'fixed';
+        fullscreenImg.style.top = '0';
+        fullscreenImg.style.left = '0';
+        fullscreenImg.style.width = '100%';
+        fullscreenImg.style.height = '100%';
+        fullscreenImg.style.backgroundColor = 'rgba(0,0,0,0.9)';
+        fullscreenImg.style.display = 'flex';
+        fullscreenImg.style.justifyContent = 'center';
+        fullscreenImg.style.alignItems = 'center';
+        fullscreenImg.style.zIndex = '1000';
+        
+        const imgElement = document.createElement('img');
+        imgElement.src = img.src;
+        imgElement.style.maxWidth = '90%';
+        imgElement.style.maxHeight = '90%';
+        imgElement.style.objectFit = 'contain';
+        
+        fullscreenImg.appendChild(imgElement);
+        document.body.appendChild(fullscreenImg);
+        
+        fullscreenImg.addEventListener('click', () => {
+          document.body.removeChild(fullscreenImg);
+        });
+      });
+    });
+  </script>
+</body></html>

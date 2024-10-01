@@ -1,0 +1,138 @@
+<html><head><base href="randonnees/trou-mouche">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Randonnée : Trou de la Mouche - Annecy Randonnées</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+  .difficulty {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .details {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .details h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+  }
+  .image-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  img {
+    max-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .map {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .back-link:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Trou de la Mouche</h1>
+    <span class="difficulty">Difficile</span>
+  </header>
+
+  <div class="details">
+    <div class="image-container">
+      <img src="trou-mouche.jpg" alt="Vue panoramique du Trou de la Mouche, montrant un paysage alpin spectaculaire avec des falaises escarpées et un ciel bleu clair" width="800" height="600">
+    </div>
+
+    <h2>Description</h2>
+    <p>Le Trou de la Mouche est une randonnée spectaculaire située dans le massif des Aravis, offrant des vues imprenables sur les Alpes françaises. Cette randonnée difficile mène à un passage rocheux unique en forme de trou, d'où le nom "Trou de la Mouche".</p>
+
+    <h2>Détails de la randonnée</h2>
+    <ul>
+      <li><strong>Durée :</strong> 6-7 heures</li>
+      <li><strong>Distance :</strong> 12 km</li>
+      <li><strong>Dénivelé positif :</strong> 1100 m</li>
+      <li><strong>Altitude max :</strong> 2453 m</li>
+      <li><strong>Point de départ :</strong> Parking de l'Étale, La Clusaz</li>
+    </ul>
+
+    <h2>Itinéraire</h2>
+    <ol>
+      <li>Départ du parking de l'Étale à La Clusaz</li>
+      <li>Suivre le sentier balisé en direction du Col des Annes</li>
+      <li>Au Col des Annes, prendre à droite vers le Trou de la Mouche</li>
+      <li>Montée progressive sur un sentier rocailleux</li>
+      <li>Passage technique avant d'atteindre le Trou de la Mouche</li>
+      <li>Retour par le même itinéraire</li>
+    </ol>
+
+    <h2>Conseils</h2>
+    <ul>
+      <li>Prévoir de bonnes chaussures de randonnée</li>
+      <li>Emporter suffisamment d'eau et de nourriture</li>
+      <li>Vérifier la météo avant de partir, éviter par temps orageux</li>
+      <li>Partir tôt le matin pour éviter la chaleur</li>
+      <li>Être en bonne condition physique, la randonnée est exigeante</li>
+    </ul>
+
+    <h2>Carte</h2>
+    <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=6.4134,45.9137,6.4634,45.9437&layer=mapnik&marker=45.9287,6.4384"></iframe>
+  </div>
+
+  <a href="../" class="back-link">Retour à la liste des randonnées</a>
+
+  <script>
+    // Script pour ajouter des fonctionnalités interactives si nécessaire
+    document.addEventListener('DOMContentLoaded', function() {
+      // Exemple : Ajout d'un bouton pour afficher/masquer la carte
+      const mapContainer = document.querySelector('.map');
+      const toggleMapBtn = document.createElement('button');
+      toggleMapBtn.textContent = 'Afficher/Masquer la carte';
+      toggleMapBtn.style.marginTop = '10px';
+      toggleMapBtn.addEventListener('click', function() {
+        mapContainer.style.display = mapContainer.style.display === 'none' ? 'block' : 'none';
+      });
+      mapContainer.parentNode.insertBefore(toggleMapBtn, mapContainer);
+    });
+  </script>
+</body></html>

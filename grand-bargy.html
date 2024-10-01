@@ -1,0 +1,132 @@
+<html><head><base href="randonnees/grand-bargy">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le Grand Bargy - Randonnée Très Difficile près d'Annecy</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  header {
+    background-color: #8e44ad;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  h1 {
+    margin-bottom: 0;
+  }
+  .difficulty {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .image-container {
+    margin: 20px 0;
+    text-align: center;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .detail-item {
+    margin-bottom: 15px;
+  }
+  .detail-item strong {
+    font-weight: bold;
+    color: #8e44ad;
+  }
+  .description {
+    margin-top: 20px;
+    text-align: justify;
+  }
+  .warning {
+    background-color: #f39c12;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .back-link:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Le Grand Bargy</h1>
+    <p class="difficulty">Niveau : Très Difficile</p>
+  </header>
+
+  <div class="image-container">
+    <img src="grand-bargy.jpg" alt="Vue panoramique du sommet du Grand Bargy, montagnes escarpées avec neige résiduelle" width="800" height="533">
+  </div>
+
+  <div class="details">
+    <div class="detail-item">
+      <strong>Durée :</strong> 7-8 heures
+    </div>
+    <div class="detail-item">
+      <strong>Distance :</strong> 14 km
+    </div>
+    <div class="detail-item">
+      <strong>Dénivelé :</strong> 1450 m
+    </div>
+    <div class="detail-item">
+      <strong>Altitude max :</strong> 2301 m
+    </div>
+    <div class="detail-item">
+      <strong>Point de départ :</strong> Parking du Chinaillon, Le Grand-Bornand
+    </div>
+
+    <div class="description">
+      <p>Le Grand Bargy est une randonnée très exigeante qui offre une expérience alpine intense aux randonneurs expérimentés. Cette ascension vous mènera au sommet d'un des plus hauts pics des Bornes, offrant des vues spectaculaires sur le Mont-Blanc, les Aravis et le Lac d'Annecy.</p>
+      <p>Le parcours débute au Chinaillon et monte progressivement à travers les alpages avant d'atteindre des terrains plus escarpés. La dernière partie de l'ascension est particulièrement technique, avec des passages exposés et rocheux qui nécessitent une bonne condition physique et une expérience en terrain alpin.</p>
+      <p>Au sommet, vous serez récompensé par un panorama à 360° époustouflant sur les Alpes. La descente emprunte le même itinéraire et requiert autant d'attention que la montée.</p>
+    </div>
+
+    <div class="warning">
+      Attention : Cette randonnée est réservée aux randonneurs expérimentés et bien équipés. Les conditions météorologiques peuvent changer rapidement en altitude. Assurez-vous d'avoir l'équipement approprié et de vérifier les prévisions avant de partir.
+    </div>
+  </div>
+
+  <a href="/randonnees/" class="back-link">Retour à la liste des randonnées</a>
+
+  <script>
+    // Ajout d'un effet de parallaxe simple sur l'image
+    window.addEventListener('scroll', function() {
+      const header = document.querySelector('header');
+      const headerHeight = header.offsetHeight;
+      const scrollPosition = window.pageYOffset;
+      const image = document.querySelector('.image-container img');
+      
+      if (scrollPosition < headerHeight) {
+        image.style.transform = `translateY(${scrollPosition * 0.4}px)`;
+      }
+    });
+  </script>
+</body></html>

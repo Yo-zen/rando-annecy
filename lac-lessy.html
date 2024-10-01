@@ -1,0 +1,124 @@
+<html><head><base href="randonnees/lac-lessy">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Randonnée au Lac de Lessy - Annecy Randonnées</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  h1 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+  }
+  .info-box {
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .difficulty {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #f39c12;
+    color: white;
+  }
+  .image-container {
+    text-align: center;
+    margin: 20px 0;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .description {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .map {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .back-link:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+  <h1>Randonnée au Lac de Lessy</h1>
+  
+  <div class="info-box">
+    <p><strong>Difficulté:</strong> <span class="difficulty">Moyen</span></p>
+    <p><strong>Durée:</strong> 4h30 - 5h00 (aller-retour)</p>
+    <p><strong>Distance:</strong> 11 km</p>
+    <p><strong>Dénivelé:</strong> 650 m</p>
+    <p><strong>Altitude max:</strong> 1781 m</p>
+  </div>
+
+  <div class="image-container">
+    <img src="lac-lessy.jpg" alt="Vue panoramique du Lac de Lessy entouré de montagnes, reflets dans l'eau calme" width="800" height="533">
+  </div>
+
+  <div class="description">
+    <h2>Description de la randonnée</h2>
+    <p>La randonnée au Lac de Lessy est une magnifique excursion qui vous mènera à l'un des plus beaux lacs de montagne de la région d'Annecy. Niché au cœur du massif des Bornes, ce lac d'altitude offre un panorama à couper le souffle sur les sommets environnants.</p>
+    
+    <p>Le sentier débute au parking du Chinaillon, dans la station du Grand-Bornand. Vous commencerez par traverser les alpages fleuris en été, où vous pourrez peut-être apercevoir des troupeaux de vaches en estive. La montée est progressive et offre de beaux points de vue sur la vallée du Bouchet.</p>
+    
+    <p>Après environ 2h30 de marche, vous atteindrez le Lac de Lessy. Ses eaux cristallines reflètent les sommets alentour, créant un spectacle saisissant. C'est l'endroit idéal pour une pause pique-nique bien méritée.</p>
+    
+    <p>Pour les plus courageux, il est possible de poursuivre jusqu'au col de l'Encrenaz, qui offre une vue imprenable sur le Mont-Blanc par temps clair.</p>
+    
+    <h3>Conseils</h3>
+    <ul>
+      <li>Partez tôt le matin pour profiter de la fraîcheur et éviter les orages fréquents l'après-midi en montagne.</li>
+      <li>Emportez suffisamment d'eau et de nourriture, il n'y a pas de point de ravitaillement sur le parcours.</li>
+      <li>Équipez-vous de bonnes chaussures de randonnée et de vêtements adaptés à la montagne.</li>
+      <li>N'oubliez pas la crème solaire, même par temps couvert, l'altitude augmente les risques de coups de soleil.</li>
+    </ul>
+  </div>
+
+  <h2>Carte du parcours</h2>
+  <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11110.280793370483!2d6.466387641210126!3d45.97452546609852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478bea77c83f8b1d%3A0x40099351b9c90a0!2sLac%20de%20Lessy!5e0!3m2!1sfr!2sfr!4v1652123456789!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
+
+  <a href="/" class="back-link">Retour à la liste des randonnées</a>
+
+  <script>
+    // Script pour ajouter des fonctionnalités interactives si nécessaire
+    document.addEventListener('DOMContentLoaded', function() {
+      // Par exemple, on pourrait ajouter un bouton pour afficher/masquer des informations supplémentaires
+      const moreInfoBtn = document.createElement('button');
+      moreInfoBtn.textContent = 'Plus d\'informations';
+      moreInfoBtn.style.marginTop = '20px';
+      moreInfoBtn.addEventListener('click', function() {
+        alert('Cette fonctionnalité est en cours de développement. Restez à l\'écoute pour plus d\'informations sur cette randonnée !');
+      });
+      document.body.appendChild(moreInfoBtn);
+    });
+  </script>
+</body></html>

@@ -1,0 +1,186 @@
+<html><head><base href="randonnees/mont-chauffe">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Randonnée au Mont Chauffé - Annecy Randonnées</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  header {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-bottom: 2rem;
+  }
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+  .difficulty {
+    display: inline-block;
+    padding: 0.3rem 0.7rem;
+    background-color: #e74c3c;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  .randonnee-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .info-item {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .info-item h3 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  .description, .itinerary {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }
+  .back-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  .back-link:hover {
+    background-color: #2980b9;
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Randonnée au Mont Chauffé</h1>
+    <span class="difficulty">Difficile</span>
+  </header>
+
+  <img src="mont-chauffe.jpg" alt="Vue panoramique du Mont Chauffé" class="randonnee-image" width="800" height="450">
+
+  <div class="info-grid">
+    <div class="info-item">
+      <h3>Durée</h3>
+      <p>6-7 heures</p>
+    </div>
+    <div class="info-item">
+      <h3>Distance</h3>
+      <p>12 km</p>
+    </div>
+    <div class="info-item">
+      <h3>Dénivelé</h3>
+      <p>1100 m</p>
+    </div>
+    <div class="info-item">
+      <h3>Altitude max</h3>
+      <p>2093 m</p>
+    </div>
+  </div>
+
+  <div class="description">
+    <h2>Description</h2>
+    <p>Le Mont Chauffé est une randonnée exigeante mais très gratifiante, offrant des vues spectaculaires sur le massif du Chablais et le lac Léman. Cette montagne emblématique se distingue par sa forme caractéristique et ses falaises impressionnantes. L'ascension demande une bonne condition physique et une expérience en randonnée de montagne.</p>
+  </div>
+
+  <div class="itinerary">
+    <h2>Itinéraire</h2>
+    <ol>
+      <li>Départ du parking de l'Ermont (1150 m)</li>
+      <li>Suivre le sentier balisé en direction du Mont Chauffé</li>
+      <li>Passer par le Pas de l'Ours, un passage un peu technique mais sécurisé</li>
+      <li>Continuer l'ascension jusqu'au sommet (2093 m)</li>
+      <li>Profiter de la vue panoramique à 360° sur les Alpes</li>
+      <li>Redescendre par le même itinéraire en restant vigilant</li>
+    </ol>
+  </div>
+
+  <div class="tips">
+    <h2>Conseils</h2>
+    <ul>
+      <li>Partir tôt le matin pour éviter la chaleur</li>
+      <li>Emporter suffisamment d'eau (minimum 2L par personne)</li>
+      <li>Prévoir des chaussures de randonnée à tige montante</li>
+      <li>Apporter des vêtements chauds, même en été, car le sommet peut être venteux</li>
+      <li>Vérifier la météo avant de partir et renoncer en cas d'orage</li>
+    </ul>
+  </div>
+
+  <a href="../../" class="back-link">Retour à la liste des randonnées</a>
+
+  <script>
+    // Ajout d'une fonctionnalité interactive pour afficher des photos supplémentaires
+    const additionalPhotos = [
+      { src: "mont-chauffe-sommet.jpg", alt: "Vue du sommet du Mont Chauffé" },
+      { src: "mont-chauffe-pas-ours.jpg", alt: "Passage du Pas de l'Ours" },
+      { src: "mont-chauffe-flore.jpg", alt: "Flore alpine du Mont Chauffé" }
+    ];
+
+    const photoGallery = document.createElement('div');
+    photoGallery.innerHTML = '<h2>Galerie photos</h2>';
+    photoGallery.style.marginTop = '2rem';
+
+    additionalPhotos.forEach(photo => {
+      const img = document.createElement('img');
+      img.src = photo.src;
+      img.alt = photo.alt;
+      img.width = 250;
+      img.height = 187;
+      img.style.margin = '0.5rem';
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        const fullImg = document.createElement('img');
+        fullImg.src = photo.src;
+        fullImg.alt = photo.alt;
+        fullImg.style.position = 'fixed';
+        fullImg.style.top = '50%';
+        fullImg.style.left = '50%';
+        fullImg.style.transform = 'translate(-50%, -50%)';
+        fullImg.style.maxWidth = '90%';
+        fullImg.style.maxHeight = '90%';
+        fullImg.style.zIndex = '1000';
+        
+        const overlay = document.createElement('div');
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0.8)';
+        overlay.style.zIndex = '999';
+        
+        overlay.appendChild(fullImg);
+        document.body.appendChild(overlay);
+        
+        overlay.addEventListener('click', () => {
+          document.body.removeChild(overlay);
+        });
+      });
+      photoGallery.appendChild(img);
+    });
+
+    document.body.insertBefore(photoGallery, document.querySelector('.back-link'));
+  </script>
+</body></html>
