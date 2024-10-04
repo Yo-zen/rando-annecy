@@ -11,6 +11,7 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
+    text-align: center;
   }
   h1, h2 {
     color: #2c3e50;
@@ -45,11 +46,29 @@
     fill: #3498db;
   }
   .description {
-    background-color: #fff;
+    background-color: #1aa6dd;
+    color: #FFFFFF;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+     }
+  .trajet {
+    background-color: #c7e618;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .point {
+    background-color: #0de43c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
   .map {
     width: 100%;
@@ -73,6 +92,7 @@
 </style>
 </head>
 <body>
+  
   <h1>Randonnée à la Cascade d'Angon</h1>
   
   <img src="images/cascade-angon.jpg" alt="Vue magnifique de la Cascade d'Angon, chute d'eau spectaculaire entourée de végétation luxuriante" class="hero-image" width="800" height="300">
@@ -97,15 +117,17 @@
       </div>
     </div>
   </div>
-
+  <h2>Description</h2>
   <div class="description">
-    <h2>Description</h2>
+   
+  <em>
     <p>La randonnée à la Cascade d'Angon est une belle excursion à faire en famille ou entre amis. Cette balade vous mènera à travers des paysages variés, entre forêts ombragées et points de vue spectaculaires sur le lac d'Annecy.</p>
     <p>Le point culminant de cette randonnée est sans conteste la magnifique cascade d'Angon, haute de plus de 60 mètres. Le bruit de l'eau qui tombe et la fraîcheur des embruns créent une ambiance magique et rafraîchissante, surtout en été.</p>
     <p>Le sentier est bien balisé mais peut être glissant par endroits, surtout après la pluie. Prévoyez de bonnes chaussures de marche et de l'eau en quantité suffisante.</p>
+  </em>
   </div>
-  <div class="description">
-    <h2>Détail du trajet</h2>
+  <h2>Détail du trajet</h2>
+  <div class="trajet">
     <p>- Départ du parking d'Angon, prendre le chemin à gauche qui commence par une route goudronnée.</p>
     <p>- Traverser une prairie en montant, passer à gauche d'une maison.</p>
     <p>- Arrivé sur une petite route, prendre à gauche (direction Cascade d'Angon).</p>
@@ -118,10 +140,18 @@
     <p>- À Angon, prendre à gauche pour retourner au parking.</p>
     <p>Ce trajet inclut le passage par la cascade d'Angon et offre une boucle complète revenant au point de départ.</p>
   </div>
+  <h2>Points d'intérêt</h2>
+  <div class="point">
+      <li>Cascade d'Angon : Chute impressionnante de 60m, alimentée par le Nant d'Oy et le Nant du Grenant</li>
+      <li>Pont des fées : Un pont pittoresque surplombant la cascade, offrant une vue magnifique et un cadre romantique</li>
+      <li>Vues panoramiques : Superbes points de vue sur le lac d'Annecy, la Tournette et les Dents de Lanfon tout au long du parcours</li>
+      <li>Chalet de montagne : Un petit chalet avec vue sur le lac, idéal pour faire une pause pendant la randonnée</li>
+      <li>Senteurs et sons : Ambiance naturelle avec le bruit de l'eau et les senteurs des sous-bois, créant une expérience immersive</li>
+    </div>
   <h2>Itinéraire</h2>
   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11074.48397575908!2d6.213333!3d45.833333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8ffde64c4b6d%3A0x6c7f82bc82eae5a!2sCascade%20d&#39;Angon!5e0!3m2!1sfr!2sfr!4v1652175689012!5m2!1sfr!2sfr" class="map" allowfullscreen="" loading="lazy"></iframe>
 
-  <a href="/" class="back-btn">Retour à la liste des randonnées</a>
+  <a href="https://yo-zen.github.io/rando-annecy/" class="back-btn">Retour à la liste des randonnées</a>
 
   <script>
     // Ici, vous pouvez ajouter du JavaScript pour rendre la page plus interactive
