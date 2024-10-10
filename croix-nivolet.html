@@ -1,7 +1,7 @@
 <html><head><base href="https://yo-zen.github.io/rando-annecy/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Randonnée à la Croix du Nivolet - Annecy Randonnées</title>
+<title>Randonnée à la croix du Nivolet</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -11,123 +11,152 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
-  }
-  header {
-    background-color: #3498db;
-    color: white;
     text-align: center;
-    padding: 1rem;
-    border-radius: 5px;
   }
-  h1 {
-    margin-bottom: 0;
-  }
-  .difficulty {
-    display: inline-block;
-    background-color: #f39c12;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-  }
-  .details {
-    background-color: white;
-    border-radius: 5px;
-    padding: 20px;
-    margin-top: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  .details h2 {
+  h1, h2 {
     color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
   }
-  .image-container {
-    text-align: center;
-    margin: 20px 0;
+  .hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
   }
-  .image-container img {
-    max-width: 100%;
-    border-radius: 5px;
+  .info-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+  }
+  .info-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #3498db;
+  }
+  .description {
+    background-color: #1aa6dd;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+     }
+  .trajet {
+    background-color: #4f1097;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .point {
+    background-color: #0de43c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
   .map {
     width: 100%;
     height: 400px;
     border: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-radius: 10px;
   }
-  .back-link {
+  .back-btn {
     display: inline-block;
-    margin-top: 20px;
     background-color: #3498db;
     color: white;
-    padding: 10px 15px;
     text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 20px;
     transition: background-color 0.3s;
   }
-  .back-link:hover {
+  .back-btn:hover {
     background-color: #2980b9;
   }
 </style>
 </head>
 <body>
-  <header>
+  
     <h1>Randonnée à la Croix du Nivolet</h1>
-    <p class="difficulty">Niveau : Moyen</p>
-  </header>
-
-  <div class="image-container">
-    <img src="images/croix-nivolet.jpg" alt="Vue panoramique depuis la Croix du Nivolet" width="800" height="533">
+  
+  <img src="images/croix-nivolet.jpg" alt="Vue magnifique de la Cascade d'Angon, chute d'eau spectaculaire entourée de végétation luxuriante" class="hero-image" width="800" height="300">
+  
+  <div class="info-box">
+    <div class="info-grid">
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM12 7V3H2v18h20V7H12zM10 15H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 8h-6v-2h6v2zm0-4h-6V9h6v2z"/></svg>
+        <span>Difficulté : Moyenne</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <span>Durée : 3h30 à 5h aller-retour</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+        <span>Distance : 10 km aller-retour</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+        <span>Dénivelé : 400 m</span>
+      </div>
+    </div>
   </div>
+  <h2>Description</h2>
+  <div class="description">
+   
+  <em>
+    <p>Cette randonnée emblématique offre une ascension vers la Croix du Nivolet, un monument impressionnant de 21,5 mètres de hauteur situé à 1547 mètres d'altitude.</p>
+    <p>Le parcours traverse des alpages fleuris, des forêts et offre des vues panoramiques spectaculaires sur la région.</p>
+    
 
-  <div class="details">
-    <h2>Description</h2>
-    <p>La randonnée à la Croix du Nivolet est une excursion populaire offrant une vue imprenable sur le lac du Bourget et les Alpes environnantes. Bien que classée comme moyenne, cette randonnée présente quelques défis qui en font une expérience enrichissante pour les marcheurs de niveau intermédiaire.</p>
+    
+  </em>
+</div>
+  <h2>Points d'intérêt</h2>
+  <div class="point">
+    <li>Vue panoramique à 360° sur les Alpes</li>
+    <li>La Croix du Nivolet (21,5 m de hauteur)</li>
+    <li>Lac du Bourget</li>
+    <li>Massifs de l'Épine, de la Chartreuse, des Belledonnes et de la Vanoise</li>
+    <li>Vue sur Chambéry et Aix-les-Bains</li>
+    <li>Possibilité d'observer des parapentes en vol</li>
+    
 
-    <h2>Caractéristiques</h2>
-    <ul>
-      <li><strong>Distance :</strong> 12 km aller-retour</li>
-      <li><strong>Dénivelé :</strong> 800 m</li>
-      <li><strong>Durée estimée :</strong> 4 à 5 heures</li>
-      <li><strong>Point de départ :</strong> Parking de Lovettaz</li>
-    </ul>
-
-    <h2>Itinéraire</h2>
-    <ol>
-      <li>Départ du parking de Lovettaz</li>
-      <li>Suivre le sentier balisé en direction du Nivolet</li>
-      <li>Passage par le chalet du Sire</li>
-      <li>Montée progressive jusqu'au col du Nivolet</li>
-      <li>Dernière ascension jusqu'à la Croix du Nivolet</li>
+  </div>
+  <h2>Détail du trajet</h2>
+  <div class="trajet">
+      <li>Départ du parking du Chalet des Sires à La Féclaz</li>
+      <li>Suivre le sentier balisé en direction de la Croix du Nivolet</li>
+      <li>Traverser l'alpage du Sire, près du téléski</li>
+      <li>Continuer sur le large chemin forestier</li>
+      <li>Atteindre la Croix du Nivolet et profiter du panorama</li>
       <li>Retour par le même chemin</li>
-    </ol>
-
-    <h2>Conseils</h2>
-    <ul>
-      <li>Prévoir de bonnes chaussures de randonnée</li>
-      <li>Emporter suffisamment d'eau et des en-cas</li>
-      <li>Vérifier la météo avant de partir</li>
-      <li>Partir tôt pour éviter la chaleur en été</li>
-    </ul>
-
-    <h2>Points d'intérêt</h2>
-    <ul>
-      <li>Vue panoramique sur le lac du Bourget</li>
-      <li>Paysages variés : forêts, alpages</li>
-      <li>Faune et flore alpine</li>
-      <li>Croix du Nivolet (emblématique de la région)</li>
-    </ul>
+    
   </div>
+  <h2>Itinéraire</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23850.25046042884!2d5.929290457619948!3d45.6140614719039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba60c8418a69f%3A0xb616397452fbf73a!2sCroix%20du%20Nivolet!5e0!3m2!1sfr!2sfr!4v1728570729856!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-  <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=5.8813,45.6412,5.9813,45.7412&amp;layer=mapnik&amp;marker=45.6912,5.9313"></iframe>
-
-  <a href="../" class="back-link">Retour à la liste des randonnées</a>
+  <a href="https://yo-zen.github.io/rando-annecy/" class="back-btn">Retour à la liste des randonnées</a>
 
   <script>
-    // Ici, vous pouvez ajouter du JavaScript pour améliorer l'interactivité de la page
-    // Par exemple, un slider pour les images, une carte interactive, etc.
+    // Ici, vous pouvez ajouter du JavaScript pour rendre la page plus interactive
+    // Par exemple, vous pourriez ajouter une galerie d'images, un système de notation, ou des commentaires d'autres randonneurs
   </script>
 </body></html>

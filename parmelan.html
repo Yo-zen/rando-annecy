@@ -1,7 +1,7 @@
 <html><head><base href="https://yo-zen.github.io/rando-annecy/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Randonnée au Parmelan - Annecy Randonnées</title>
+<title>Randonnée au Parmelan</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -11,126 +11,151 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
-  }
-  header {
-    background-color: #2c3e50;
-    color: white;
     text-align: center;
-    padding: 1rem;
-    margin-bottom: 2rem;
   }
-  h1 {
-    margin-bottom: 0.5rem;
+  h1, h2 {
+    color: #2c3e50;
   }
-  .difficulty {
-    display: inline-block;
-    padding: 0.3rem 0.7rem;
-    background-color: #8e44ad;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
+  .hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .info-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   .info-item {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .info-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #3498db;
+  }
+  .description {
+    background-color: #1aa6dd;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  .info-item h3 {
-    margin-top: 0;
-    color: #2c3e50;
-  }
-  .description, .itinerary, .tips {
-    background-color: white;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 5px;
+
+     }
+  .trajet {
+    background-color: #4f1097;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+  .point {
+    background-color: #0de43c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
   .map {
     width: 100%;
     height: 400px;
     border: none;
+    border-radius: 10px;
+  }
+  .back-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  .back-btn:hover {
+    background-color: #2980b9;
   }
 </style>
 </head>
 <body>
-  <header>
+  
     <h1>Randonnée au Parmelan</h1>
-    <span class="difficulty">Très Difficile</span>
-  </header>
-
-  <img src="images/parmelan-panorama.jpg" alt="Vue panoramique depuis le sommet du Parmelan" width="800" height="400">
-
-  <div class="info-grid">
-    <div class="info-item">
-      <h3>Distance</h3>
-      <p>14 km aller-retour</p>
-    </div>
-    <div class="info-item">
-      <h3>Dénivelé</h3>
-      <p>+1100 m</p>
-    </div>
-    <div class="info-item">
-      <h3>Durée</h3>
-      <p>6-7 heures</p>
-    </div>
-    <div class="info-item">
-      <h3>Altitude max</h3>
-      <p>1832 m</p>
+  
+  <img src="images/parmelan.jpg" alt="Vue magnifique de la Cascade d'Angon, chute d'eau spectaculaire entourée de végétation luxuriante" class="hero-image" width="800" height="300">
+  
+  <div class="info-box">
+    <div class="info-grid">
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM12 7V3H2v18h20V7H12zM10 15H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 8h-6v-2h6v2zm0-4h-6V9h6v2z"/></svg>
+        <span>Difficulté : difficile</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <span>Durée : 5-6 h aller retour</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+        <span>Distance : 9-10 kms aller retour</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+        <span>Dénivelé : 750 m</span>
+      </div>
     </div>
   </div>
+  <h2>Description</h2>
+  <div class="description">
+   
+  <em>
+    <p>La randonnée au Parmelan est une des plus emblématiques autour d'Annecy.</p>
+    <p>Elle offre un parcours varié avec des paysages spectaculaires, passant par des forêts, des falaises impressionnantes et un plateau calcaire unique.</p>
+    <p>L'ascension peut se faire par deux voies principales : le Grand Montoir (plus difficile et aérien) ou le Petit Montoir (plus facile). Le sommet offre une vue panoramique à 360° sur les Alpes et le lac d'Annecy.</p>
+</em>
+</div>
+  <h2>Points d'intérêt</h2>
+  <div class="point">
+    <li>Vue panoramique sur le lac d'Annecy et les Alpes</li>
+    <li>Plateau calcaire avec lapiaz (formations rocheuses érodées)</li>
+    <li>Grand Montoir (passage aérien équipé de câbles)</li>
+    <li>Chalet Chappuis</li>
+    <li>Refuge Camille Dunant au sommet</li>
+    <li>Croix du Parmelan</li>
+        
 
-  <section class="description">
-    <h2>Description</h2>
-    <p>Le Parmelan est une randonnée emblématique des Alpes françaises, offrant une expérience unique aux randonneurs expérimentés. Situé dans le massif des Bornes, ce sommet calcaire se caractérise par son plateau karstique spectaculaire, surnommé "les lapiaz". La randonnée est exigeante mais offre des panoramas exceptionnels sur le lac d'Annecy, le massif des Aravis et le Mont-Blanc.</p>
-  </section>
+  </div>
+  <h2>Détail du trajet</h2>
+  <div class="trajet">
+    <li>Départ du parking du Bois Brûlé à Villaz</li>
+    <li>Montée en forêt jusqu'au Chalet Chappuis</li>
+    <li>Choix entre le Grand Montoir (difficile) ou le Petit Montoir (plus facile)</li>
+    <li>Traversée du plateau calcaire</li>
+    <li>Arrivée au refuge Camille Dunant</li>
+    <li>Courte montée jusqu'à la croix du Parmelan</li>
+    <li>Retour par le même chemin ou en boucle par le plateau</li>
+  
+  </div>
+  <h2>Itinéraire</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44387.39334741862!2d6.195176778612976!3d45.94704546303719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8c1477d5677f%3A0x1a8ea3762a70057e!2sParmelan!5e0!3m2!1sfr!2sfr!4v1728564470012!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-  <section class="itinerary">
-    <h2>Itinéraire</h2>
-    <ol>
-      <li>Départ du parking de la Blonnière (1150 m)</li>
-      <li>Suivre le sentier balisé en direction du refuge du Parmelan</li>
-      <li>Traversée de la forêt avec plusieurs lacets raides</li>
-      <li>Arrivée au refuge du Parmelan (1825 m)</li>
-      <li>Traversée du plateau des lapiaz (attention aux passages exposés)</li>
-      <li>Sommet du Grand Montoir (1832 m)</li>
-      <li>Retour par le même itinéraire</li>
-    </ol>
-  </section>
-
-  <section class="tips">
-    <h2>Conseils</h2>
-    <ul>
-      <li>Cette randonnée est réservée aux marcheurs expérimentés et en bonne condition physique</li>
-      <li>Prévoir de bonnes chaussures de randonnée à semelles crantées</li>
-      <li>Emporter suffisamment d'eau (pas de point d'eau sur le parcours après le refuge)</li>
-      <li>Protection solaire indispensable (chapeau, crème solaire, lunettes)</li>
-      <li>Bâtons de randonnée recommandés pour la descente</li>
-      <li>Éviter par temps de pluie ou de brouillard (risque de se perdre dans les lapiaz)</li>
-      <li>Possibilité de dormir au refuge du Parmelan (réservation nécessaire)</li>
-    </ul>
-  </section>
-
-  <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=6.162109375%2C45.90529985724799%2C6.218414306640625%2C45.94149004780841&amp;layer=mapnik&amp;marker=45.92340386006592%2C6.190261840820312" width="800" height="400"></iframe>
+  <a href="https://yo-zen.github.io/rando-annecy/" class="back-btn">Retour à la liste des randonnées</a>
 
   <script>
-    // Ajout d'un gestionnaire d'événements pour afficher une alerte de sécurité
-    document.addEventListener('DOMContentLoaded', (event) => {
-      alert("Attention : Cette randonnée est classée très difficile. Assurez-vous d'être bien préparé et équipé avant de l'entreprendre. En cas de doute, faites appel à un guide professionnel.");
-    });
+    // Ici, vous pouvez ajouter du JavaScript pour rendre la page plus interactive
+    // Par exemple, vous pourriez ajouter une galerie d'images, un système de notation, ou des commentaires d'autres randonneurs
   </script>
 </body></html>

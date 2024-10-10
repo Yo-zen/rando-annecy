@@ -11,47 +11,71 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
-  }
-  header {
-    background-color: #8e44ad;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 5px;
-  }
-  h1 {
-    margin-bottom: 0;
-  }
-  .difficulty {
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  .image-container {
-    margin: 20px 0;
     text-align: center;
   }
-  img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  h1, h2 {
+    color: #2c3e50;
   }
-  .details {
-    background-color: white;
+  .hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .info-box {
+    background-color: #fff;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-  .detail-item {
-    margin-bottom: 15px;
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
-  .detail-item strong {
-    font-weight: bold;
-    color: #8e44ad;
+  .info-item {
+    display: flex;
+    align-items: center;
+  }
+  .info-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #3498db;
   }
   .description {
-    margin-top: 20px;
-    text-align: justify;
+    background-color: #1aa6dd;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+     }
+  .trajet {
+    background-color: #4f1097;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .point {
+    background-color: #0de43c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .map {
+    width: 100%;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
   }
   .warning {
     background-color: #f39c12;
@@ -61,72 +85,88 @@
     margin-top: 20px;
     font-weight: bold;
   }
-  .back-link {
+  .back-btn {
     display: inline-block;
-    margin-top: 20px;
     background-color: #3498db;
     color: white;
-    padding: 10px 15px;
     text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 20px;
     transition: background-color 0.3s;
   }
-  .back-link:hover {
+  .back-btn:hover {
     background-color: #2980b9;
   }
 </style>
 </head>
 <body>
-  <header>
-    <h1>Le Grand Bargy</h1>
-    <p class="difficulty">Niveau : Très Difficile</p>
-  </header>
-
-  <div class="image-container">
-    <img src="images/grand-bargy.jpg" alt="Vue panoramique du sommet du Grand Bargy, montagnes escarpées avec neige résiduelle" width="800" height="533">
+  
+    <h1>Randonnée au Grand Bargy</h1>
+  
+  <img src="images/grand-bargy.jpg" alt="Vue magnifique de la Cascade d'Angon, chute d'eau spectaculaire entourée de végétation luxuriante" class="hero-image" width="800" height="300">
+  
+  <div class="info-box">
+    <div class="info-grid">
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM12 7V3H2v18h20V7H12zM10 15H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 8h-6v-2h6v2zm0-4h-6V9h6v2z"/></svg>
+        <span>Difficulté : Très difficile</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <span>Durée : 7-8h </span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+        <span>Distance : 14 km </span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+        <span>Dénivelé : 1450 m</span>
+      </div>
+    </div>
   </div>
-
-  <div class="details">
-    <div class="detail-item">
-      <strong>Durée :</strong> 7-8 heures
-    </div>
-    <div class="detail-item">
-      <strong>Distance :</strong> 14 km
-    </div>
-    <div class="detail-item">
-      <strong>Dénivelé :</strong> 1450 m
-    </div>
-    <div class="detail-item">
-      <strong>Altitude max :</strong> 2301 m
-    </div>
-    <div class="detail-item">
-      <strong>Point de départ :</strong> Parking du Chinaillon, Le Grand-Bornand
-    </div>
-
-    <div class="description">
+  <h2>Description</h2>
+  <div class="description">
+   
+  <em>
       <p>Le Grand Bargy est une randonnée très exigeante qui offre une expérience alpine intense aux randonneurs expérimentés. Cette ascension vous mènera au sommet d'un des plus hauts pics des Bornes, offrant des vues spectaculaires sur le Mont-Blanc, les Aravis et le Lac d'Annecy.</p>
       <p>Le parcours débute au Chinaillon et monte progressivement à travers les alpages avant d'atteindre des terrains plus escarpés. La dernière partie de l'ascension est particulièrement technique, avec des passages exposés et rocheux qui nécessitent une bonne condition physique et une expérience en terrain alpin.</p>
       <p>Au sommet, vous serez récompensé par un panorama à 360° époustouflant sur les Alpes. La descente emprunte le même itinéraire et requiert autant d'attention que la montée.</p>
-    </div>
-
-    <div class="warning">
-      Attention : Cette randonnée est réservée aux randonneurs expérimentés et bien équipés. Les conditions météorologiques peuvent changer rapidement en altitude. Assurez-vous d'avoir l'équipement approprié et de vérifier les prévisions avant de partir.
-    </div>
+       
+  </em>
+  <div class="warning">
+    Attention : Cette randonnée est réservée aux randonneurs expérimentés et bien équipés. Les conditions météorologiques peuvent changer rapidement en altitude. Assurez-vous d'avoir l'équipement approprié et de vérifier les prévisions avant de partir.
   </div>
+</div>
+  <h2>Points d'intérêt</h2>
+  <div class="point">
+    <li>Vue panoramique sur le massif du Mont-Blanc et les Aravis</li>
+    <li>Possibilité d'observer la faune de montagne (bouquetins, chamois)</li>
+    <li>Formations géologiques intéressantes</li>
+    <li>Alpages traditionnels</li>
+    
+    
 
-  <a href="/randonnees/" class="back-link">Retour à la liste des randonnées</a>
+  </div>
+  <h2>Détail du trajet</h2>
+  <div class="trajet">
+      <li>Suivre la piste du Chalet Neuf ou couper à travers les alpages en suivant le téléski. Une fois au Chalet Neuf, se diriger au nord-ouest en direction de la combe Servagin. Remonter celle-ci en restant en rive droite du pierrier situé à l’est de la combe. Arrivé en haut du pierrier, il y a deux possibilités :</li>
+      <p>     - Suivre le lit d’un nant asséché (quelques pas de grimpette faciles).</p>
+      <p>     - un couloir herbeux raide à gauche du nant.</p>
+      <li>Une fois en haut du nant, suivre en ascendance à gauche les pentes herbeuses jusqu’à un replat depuis lequel on devine le col situé entre la Tour et le Grand Bargy. Remonter vers celui-ci en appuyant vers les parois sur la fin.</li>
+      <li>Une fois au col, trouver une marque orange sur la paroi côté Grand Bargy. Suivre les marques en ascendance à droite en direction d’une cheminée facile (pas de II). Revenir ensuite à gauche sur une vire étroite pour rejoindre le plateau sommital. Atteindre la croix sommitale en quelques minutes (2301 mètres).</li>
+      <li>Pour la descente, traverser l’intégralité du plateau sommital en direction du col d’Encrenaz. Il suffit de suivre les marques oranges et les cairns. Aucun passage difficile si l’on est sur le bon cheminement. Une fois au col d’Encrenaz, descendre en versant sud jusqu’aux chalets de "La Cha". Suivre le sentier vers l’ouest pour retrouver Chalet Neuf.</li>
+    
+    
+  </div>
+  <h2>Itinéraire</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57763.86637972972!2d6.4335106241141995!3d45.98295646043733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478bf7fa9af13cb5%3A0x1860c52d939cf54b!2sLe%20Grand%20Bargy!5e0!3m2!1sfr!2sfr!4v1728570918896!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+  <a href="https://yo-zen.github.io/rando-annecy/" class="back-btn">Retour à la liste des randonnées</a>
 
   <script>
-    // Ajout d'un effet de parallaxe simple sur l'image
-    window.addEventListener('scroll', function() {
-      const header = document.querySelector('header');
-      const headerHeight = header.offsetHeight;
-      const scrollPosition = window.pageYOffset;
-      const image = document.querySelector('.image-container img');
-      
-      if (scrollPosition < headerHeight) {
-        image.style.transform = `translateY(${scrollPosition * 0.4}px)`;
-      }
-    });
+    // Ici, vous pouvez ajouter du JavaScript pour rendre la page plus interactive
+    // Par exemple, vous pourriez ajouter une galerie d'images, un système de notation, ou des commentaires d'autres randonneurs
   </script>
 </body></html>

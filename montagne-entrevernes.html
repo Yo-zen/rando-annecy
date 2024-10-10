@@ -1,7 +1,7 @@
 <html><head><base href="https://yo-zen.github.io/rando-annecy/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Randonnée : Montagne d'Entrevernes - Détails</title>
+<title>Randonnée à la Montagne d'Entrevernes</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -11,34 +11,65 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
+    text-align: center;
   }
-  h1 {
+  h1, h2 {
     color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
   }
-  .randonnee-image {
+  .hero-image {
     width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 20px;
   }
   .info-box {
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-  .difficulty {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    background-color: #e74c3c;
-    color: white;
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+  }
+  .info-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #3498db;
+  }
+  .description {
+    background-color: #1aa6dd;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+     }
+  .trajet {
+    background-color: #4f1097;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .point {
+    background-color: #0de43c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
   .map {
     width: 100%;
@@ -53,6 +84,7 @@
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 20px;
     transition: background-color 0.3s;
   }
   .back-btn:hover {
@@ -61,45 +93,71 @@
 </style>
 </head>
 <body>
-  <h1>Randonnée : Montagne d'Entrevernes</h1>
   
-  <img src="images/montagne-entrevernes.jpg" alt="Vue panoramique de la Montagne d'Entrevernes" class="randonnee-image" width="800" height="400">
-
+    <h1>Randonnée à la Montagne d'Entrevernes</h1>
+  
+  <img src="images/montagne-entrevernes.jpg" alt="Vue magnifique de la Cascade d'Angon, chute d'eau spectaculaire entourée de végétation luxuriante" class="hero-image" width="800" height="300">
+  
   <div class="info-box">
-    <h2>Informations générales</h2>
-    <p><strong>Difficulté :</strong> <span class="difficulty">Difficile</span></p>
-    <p><strong>Durée :</strong> 5-6 heures</p>
-    <p><strong>Distance :</strong> 12 km</p>
-    <p><strong>Dénivelé :</strong> 900 m</p>
-    <p><strong>Altitude max :</strong> 1 811 m</p>
+    <div class="info-grid">
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM12 7V3H2v18h20V7H12zM10 15H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 8h-6v-2h6v2zm0-4h-6V9h6v2z"/></svg>
+        <span>Difficulté : difficile</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <span>Durée : 4-5h </span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+        <span>Distance : 9 kms</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+        <span>Dénivelé : 769 m</span>
+      </div>
+    </div>
   </div>
+  <h2>Description</h2>
+  <div class="description">
+   
+  <em>
+    <p>Cette boucle offre une randonnée variée passant par le col de la Cochette</p>
+    <p>Elle traverse des paysages diversifiés incluant des forêts, des alpages et des crêtes.</p>
+    <p>Le parcours alterne entre montées en lacets, descentes progressives et remontées, offrant une expérience complète avec de superbes points de vue tout au long du chemin.</p>
+    <p>Crête de la montagne d'Entrevernes</p>
+ 
+  </em>
+</div>
+  <h2>Points d'intérêt</h2>
+  <div class="point">
+    <li>Vues panoramiques sur le lac d'Annecy</li>
+    <li>Massifs des Bornes et des Bauges</li>
+    <li>Col de la Cochette</li>
+    <li>Crête de la montagne d'Entrevernes</li>
+    <li>Le Taillefer</li>
+    <li>Hameau des Maisons</li>
+    <li>Patrimoine et histoire locale</li>
+    
 
-  <div class="info-box">
-    <h2>Description</h2>
-    <p>La randonnée à la Montagne d'Entrevernes est une aventure exigeante mais extrêmement gratifiante. Cette ascension vous offrira des panoramas exceptionnels sur le lac d'Annecy, les Bauges et les Aravis. Le sentier traverse des paysages variés, allant des forêts denses aux alpages fleuris.</p>
-    <p>Le parcours débute au col de l'Aulp et grimpe progressivement à travers la forêt. Après avoir émergé au-dessus de la ligne des arbres, vous traverserez des prairies alpines avant d'atteindre les crêtes rocheuses. Le sommet offre une vue à 360° sur les Alpes environnantes, un spectacle à couper le souffle qui récompense largement l'effort fourni.</p>
   </div>
-
-  <div class="info-box">
-    <h2>Conseils</h2>
-    <ul>
-      <li>Portez de bonnes chaussures de randonnée avec un bon maintien de la cheville.</li>
-      <li>Emportez suffisamment d'eau (minimum 2 litres par personne) et des en-cas énergétiques.</li>
-      <li>Protégez-vous du soleil avec un chapeau, des lunettes et de la crème solaire.</li>
-      <li>Vérifiez la météo avant de partir et n'hésitez pas à rebrousser chemin si les conditions se dégradent.</li>
-      <li>Certains passages peuvent être exposés, restez vigilants et tenez les enfants par la main.</li>
-    </ul>
+  <h2>Détail du trajet</h2>
+  <div class="trajet">
+      <li>Départ d'Entrevernes</li>
+      <li>Montée en lacets jusqu'au col de la Cochette</li>
+      <li>Descente progressive sur la crête de la montagne d'Entrevernes</li>
+      <li>Passage par le hameau des Maisons</li>
+      <li>Remontée sur le Taillefer</li>
+      <li>Retour à Entrevernes</li>
+      
   </div>
+  <h2>Itinéraire</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44498.47727498208!2d6.1530040853471855!3d45.80815749563135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b971627a5006f%3A0x5a0c204cbc56c8!2sMontagne%20d&#39;Entrevernes!5e0!3m2!1sfr!2sfr!4v1728560479471!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-  <div class="info-box">
-    <h2>Carte du parcours</h2>
-    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22183.030389799907!2d6.202887340673828!3d45.80960070000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8e1a0000000f%3A0x40819a5fd970220!2sMontagne%20d&#39;Entrevernes!5e0!3m2!1sfr!2sfr!4v1652893245784!5m2!1sfr!2sfr" width="600" height="450" allowfullscreen="" loading="lazy"></iframe>
-  </div>
-
-  <a href="../" class="back-btn">Retour à la liste des randonnées</a>
+  <a href="https://yo-zen.github.io/rando-annecy/" class="back-btn">Retour à la liste des randonnées</a>
 
   <script>
-    // Ici, vous pouvez ajouter du JavaScript pour améliorer l'interactivité de la page
-    // Par exemple, vous pourriez créer une galerie d'images, un système de notation, ou un formulaire de commentaires
+    // Ici, vous pouvez ajouter du JavaScript pour rendre la page plus interactive
+    // Par exemple, vous pourriez ajouter une galerie d'images, un système de notation, ou des commentaires d'autres randonneurs
   </script>
 </body></html>

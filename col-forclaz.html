@@ -1,7 +1,7 @@
 <html><head><base href="https://yo-zen.github.io/rando-annecy/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Randonnée au Col de la Forclaz - Annecy</title>
+<title>Randonnée au Col de la Forclaz</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -11,6 +11,7 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
+    text-align: center;
   }
   h1, h2 {
     color: #2c3e50;
@@ -29,13 +30,46 @@
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-  .difficulty {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #f39c12;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+  }
+  .info-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #3498db;
+  }
+  .description {
+    background-color: #1aa6dd;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+     }
+  .trajet {
+    background-color: #4f1097;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .point {
+    background-color: #0de43c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
   .map {
     width: 100%;
@@ -43,79 +77,86 @@
     border: none;
     border-radius: 10px;
   }
-  .back-link {
+  .back-btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
     background-color: #3498db;
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 20px;
     transition: background-color 0.3s;
   }
-  .back-link:hover {
+  .back-btn:hover {
     background-color: #2980b9;
   }
 </style>
 </head>
 <body>
+  
   <h1>Randonnée au Col de la Forclaz</h1>
   
-  <img src="images/col-forclaz.jpg" alt="Vue panoramique depuis le Col de la Forclaz sur le lac d'Annecy" class="hero-image" width="800" height="300">
+  <img src="images/col-forclaz.jpg" alt="Vue magnifique de la Cascade d'Angon, chute d'eau spectaculaire entourée de végétation luxuriante" class="hero-image" width="800" height="300">
   
   <div class="info-box">
-    <h2>Informations sur la randonnée</h2>
-    <p><strong>Difficulté:</strong> <span class="difficulty">Moyen</span></p>
-    <p><strong>Durée:</strong> 3h30 - 4h (aller-retour)</p>
-    <p><strong>Distance:</strong> 8 km</p>
-    <p><strong>Dénivelé:</strong> 650 m</p>
-    <p><strong>Altitude max:</strong> 1150 m</p>
+    <div class="info-grid">
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM12 7V3H2v18h20V7H12zM10 15H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 8h-6v-2h6v2zm0-4h-6V9h6v2z"/></svg>
+        <span>Difficulté : Moyenne</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <span>Durée : environ 4h aller-retour</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+        <span>Distance : 9,5 km (boucle)</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+        <span>Dénivelé : 650 m</span>
+      </div>
+    </div>
   </div>
-
-  <div class="info-box">
-    <h2>Description</h2>
+  <h2>Description</h2>
+  <div class="description">
+   
+  <em>
     <p>Le Col de la Forclaz offre l'un des plus beaux panoramas sur le lac d'Annecy. Cette randonnée de difficulté moyenne vous mènera à travers des sentiers boisés jusqu'à un point de vue exceptionnel sur le lac et les montagnes environnantes.</p>
     <p>Le chemin est bien balisé et accessible à la plupart des randonneurs en bonne condition physique. Au sommet, vous pourrez profiter d'une vue à 360° sur le lac d'Annecy, le massif des Bauges et les Alpes.</p>
-  </div>
+    <p>Vous pouurez également admirer les parapentistes qui se lancent depuis le site de décollage un peu plus haut</p>
 
-  <div class="info-box">
-    <h2>Itinéraire</h2>
-    <ol>
+    
+  </em>
+</div>
+  <h2>Points d'intérêt</h2>
+  <div class="point">
+    <li>Vue panoramique sur le lac d'Annecy</li>
+    <li>Chalet de l'Aulp</li>
+    <li>Pointe de la Rochette</li>
+    <li>Observation des parapentes en vol</li>
+    <li>Paysages variés (forêts, alpages, hameaux)</li>
+    <li>Aire d'envol des parapentes</li>
+    
+
+  </div>
+  <h2>Détail du trajet</h2>
+  <div class="trajet">
       <li>Départ du parking de Montmin</li>
       <li>Suivre le sentier balisé en direction du Col de la Forclaz</li>
       <li>Traversée de la forêt avec quelques passages plus raides</li>
       <li>Arrivée au Col de la Forclaz et son point de vue panoramique</li>
       <li>Possibilité de continuer jusqu'au sommet de la Tournette pour les plus courageux</li>
       <li>Retour par le même chemin</li>
-    </ol>
+    
   </div>
+  <h2>Itinéraire</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11124.568692358842!2d6.234514820499727!3d45.80841098537445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b949d36384fa5%3A0x61c0e613c07b84c9!2sCol%20de%20la%20Forclaz!5e0!3m2!1sfr!2sfr!4v1728570667578!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-  <div class="info-box">
-    <h2>Conseils</h2>
-    <ul>
-      <li>Portez de bonnes chaussures de randonnée</li>
-      <li>Emportez suffisamment d'eau et un pique-nique</li>
-      <li>Protégez-vous du soleil (chapeau, crème solaire)</li>
-      <li>Vérifiez la météo avant de partir</li>
-      <li>Le site est connu pour le parapente, vous pourrez peut-être observer des décollages</li>
-    </ul>
-  </div>
-
-  <h2>Carte de la randonnée</h2>
-  <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=6.222,45.800,6.250,45.820&layer=mapnik" class="map"></iframe>
-
-  <a href="/" class="back-link">Retour à la liste des randonnées</a>
+  <a href="https://yo-zen.github.io/rando-annecy/" class="back-btn">Retour à la liste des randonnées</a>
 
   <script>
-    // Animation pour faire apparaître progressivement les sections
-    document.addEventListener('DOMContentLoaded', (event) => {
-      const infoBoxes = document.querySelectorAll('.info-box');
-      infoBoxes.forEach((box, index) => {
-        setTimeout(() => {
-          box.style.transition = 'opacity 0.5s ease-in';
-          box.style.opacity = '1';
-        }, index * 200);
-      });
-    });
+    // Ici, vous pouvez ajouter du JavaScript pour rendre la page plus interactive
+    // Par exemple, vous pourriez ajouter une galerie d'images, un système de notation, ou des commentaires d'autres randonneurs
   </script>
 </body></html>

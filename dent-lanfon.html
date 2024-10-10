@@ -1,7 +1,7 @@
 <html><head><base href="https://yo-zen.github.io/rando-annecy/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Randonnée : Dent de Lanfon - Annecy</title>
+<title>Randonnée : Dent de Lanfon</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -11,6 +11,7 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
+    text-align: center;
   }
   h1, h2 {
     color: #2c3e50;
@@ -29,13 +30,46 @@
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-  .difficulty {
-    display: inline-block;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: bold;
-    background-color: #e74c3c;
-    color: white;
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+  }
+  .info-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #3498db;
+  }
+  .description {
+    background-color: #1aa6dd;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+     }
+  .trajet {
+    background-color: #4f1097;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .point {
+    background-color: #0de43c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
   .map {
     width: 100%;
@@ -43,67 +77,88 @@
     border: none;
     border-radius: 10px;
   }
-  .back-link {
+  .back-btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
     background-color: #3498db;
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 20px;
     transition: background-color 0.3s;
   }
-  .back-link:hover {
+  .back-btn:hover {
     background-color: #2980b9;
   }
 </style>
 </head>
 <body>
-  <h1>Randonnée : Dent de Lanfon</h1>
   
-  <img src="images/dent-lanfon.jpg" alt="Vue panoramique depuis la Dent de Lanfon" class="hero-image" width="800" height="300">
+    <h1>Randonnée à la Dent de Lanfon</h1>
+  
+  <img src="images/dent-lanfon.jpg" alt="Vue magnifique de la Cascade d'Angon, chute d'eau spectaculaire entourée de végétation luxuriante" class="hero-image" width="800" height="300">
   
   <div class="info-box">
-    <h2>Informations générales</h2>
-    <p><strong>Difficulté :</strong> <span class="difficulty">Difficile</span></p>
-    <p><strong>Durée :</strong> 5-6 heures</p>
-    <p><strong>Distance :</strong> 12 km</p>
-    <p><strong>Dénivelé :</strong> 900 m</p>
-    <p><strong>Altitude max :</strong> 1824 m</p>
+    <div class="info-grid">
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM12 7V3H2v18h20V7H12zM10 15H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 8h-6v-2h6v2zm0-4h-6V9h6v2z"/></svg>
+        <span>Difficulté : Difficile</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <span>Durée : 7-8 h</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+        <span>Distance : 12 km</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+        <span>Dénivelé : 1100 m</span>
+      </div>
+    </div>
   </div>
-  
-  <div class="info-box">
-    <h2>Description</h2>
+  <h2>Description</h2>
+  <div class="description">
+   
+  <em>
     <p>La Dent de Lanfon est une randonnée emblématique offrant une vue imprenable sur le lac d'Annecy et les montagnes environnantes. Cette ascension difficile mais gratifiante vous mènera à travers des paysages variés, des forêts denses aux prairies alpines, jusqu'au sommet rocheux caractéristique.</p>
     <p>Le parcours commence au parking de la Côte à Menthon-Saint-Bernard. Vous traverserez d'abord une belle forêt avant d'atteindre des zones plus escarpées. La dernière partie de l'ascension est la plus technique, avec quelques passages exposés nécessitant de l'attention.</p>
     <p>Une fois au sommet, vous serez récompensé par une vue à 360° sur le lac d'Annecy, le massif des Bornes et les Aravis. C'est l'endroit idéal pour une pause pique-nique bien méritée.</p>
+    
+
+    
+  </em>
+</div>
+  <h2>Points d'intérêt</h2>
+  <div class="point">
+      <li>Vue panoramique sur le lac d'Annecy</li>
+      <li>Sommet de la Pointe Centrale des Dents de Lanfon (1824 m)</li>
+      <li>Paysages variés (forêts, alpages, lapiaz)</li>
+      <li>Passages techniques proches de l'escalade</li>
+      <li>Flore alpine diversifiée</li>
+      <li>Chalets de l'Aulp Riant Dessous</li>
+    
+
   </div>
-  
-  <div class="info-box">
-    <h2>Conseils</h2>
-    <ul>
-      <li>Portez de bonnes chaussures de randonnée avec un bon maintien de la cheville.</li>
-      <li>Emportez suffisamment d'eau (au moins 2 litres par personne) et des en-cas énergétiques.</li>
-      <li>Partez tôt le matin pour éviter les fortes chaleurs en été.</li>
-      <li>Vérifiez la météo avant de partir et n'hésitez pas à rebrousser chemin si les conditions se dégradent.</li>
-      <li>Les bâtons de randonnée peuvent être utiles, surtout pour la descente.</li>
-    </ul>
+  <h2>Détail du trajet</h2>
+  <div class="trajet">
+      <li>Départ depuis Villard-le-Dessus (commune d'Alex)</li>
+      <li>Suivre le chemin carrossable en direction des Chalets de l'Aulp Riant</li>
+      <li>Continuer sur le sentier qui devient plus raide et technique</li>
+      <li>Passer plusieurs sections difficiles, dont une petite cheminée</li>
+      <li>Traverser un lapiaz avant d'atteindre le sommet</li>
+      <li>Retour par le même itinéraire</li>
+      
+    
   </div>
-  
-  <div class="info-box">
-    <h2>Carte du parcours</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11097.690371264392!2d6.193922989724113!3d45.85949661020049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8e1d5d2b3b4d%3A0x6a80efbd25885fda!2sDent%20de%20Lanfon!5e0!3m2!1sfr!2sfr!4v1652709234567!5m2!1sfr!2sfr" class="map" allowfullscreen="" loading="lazy"></iframe>
-  </div>
-  
-  <a href="../" class="back-link">Retour à la liste des randonnées</a>
+  <h2>Itinéraire</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11097.690371264392!2d6.193922989724113!3d45.85949661020049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8e1d5d2b3b4d%3A0x6a80efbd25885fda!2sDent%20de%20Lanfon!5e0!3m2!1sfr!2sfr!4v1652709234567!5m2!1sfr!2sfr" class="map" allowfullscreen="" loading="lazy"></iframe>
+
+  <a href="https://yo-zen.github.io/rando-annecy/" class="back-btn">Retour à la liste des randonnées</a>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const backLink = document.querySelector('.back-link');
-      backLink.addEventListener('click', function(e) {
-        e.preventDefault();
-        window.history.back();
-      });
-    });
+    // Ici, vous pouvez ajouter du JavaScript pour rendre la page plus interactive
+    // Par exemple, vous pourriez ajouter une galerie d'images, un système de notation, ou des commentaires d'autres randonneurs
   </script>
-</body></html>
+</body></html>ttp

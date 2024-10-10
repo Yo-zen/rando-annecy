@@ -11,15 +11,14 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
+    text-align: center;
   }
-  h1 {
+  h1, h2 {
     color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
   }
-  .randonnee-image {
+  .hero-image {
     width: 100%;
-    height: 400px;
+    height: 300px;
     object-fit: cover;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -29,12 +28,48 @@
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
-  .info-title {
-    font-weight: bold;
-    color: #2c3e50;
-    margin-bottom: 10px;
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .info-item {
+    display: flex;
+    align-items: center;
+  }
+  .info-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #3498db;
+  }
+  .description {
+    background-color: #1aa6dd;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+     }
+  .trajet {
+    background-color: #4f1097;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .point {
+    background-color: #0de43c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
   .map {
     width: 100%;
@@ -42,65 +77,84 @@
     border: none;
     border-radius: 10px;
   }
-  .button {
+  .back-btn {
     display: inline-block;
     background-color: #3498db;
     color: white;
     text-decoration: none;
     padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 20px;
     transition: background-color 0.3s;
   }
-  .button:hover {
+  .back-btn:hover {
     background-color: #2980b9;
   }
 </style>
 </head>
 <body>
-  <h1>Cascade de Seythenex</h1>
   
-  <img src="images/cascade-seythenex.jpg" alt="Vue magnifique de la Cascade de Seythenex entourée de verdure" class="randonnee-image" width="800" height="400">
+  <h1>Grotte et Cascade de Seythenex</h1>
+  
+  <img src="images/cascade-seythenex.jpg" alt="Vue magnifique de la Cascade d'Angon, chute d'eau spectaculaire entourée de végétation luxuriante" class="hero-image" width="800" height="300">
   
   <div class="info-box">
-    <div class="info-title">Informations générales</div>
-    <p><strong>Difficulté:</strong> Facile</p>
-    <p><strong>Durée:</strong> 1h30 - 2h (aller-retour)</p>
-    <p><strong>Distance:</strong> 3 km</p>
-    <p><strong>Dénivelé:</strong> 150 m</p>
-    <p><strong>Altitude max:</strong> 930 m</p>
+    <div class="info-grid">
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM12 7V3H2v18h20V7H12zM10 15H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 8h-6v-2h6v2zm0-4h-6V9h6v2z"/></svg>
+        <span>Difficulté : Facile</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <span>Durée : 30-40 min</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+        <span>Distance : 1 km </span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+        <span>Dénivelé : 45 m</span>
+      </div>
+    </div>
   </div>
+  <h2>Description</h2>
+  <div class="description">
+   
+  <em>
+    <p>Cette courte randonnée offre une belle découverte de la cascade de Seythenex, un site naturel impressionnant en Haute-Savoie.</p>
+    <p>Le parcours est bien aménagé et accessible à tous, avec des chemins et des passerelles qui mènent au sommet de la cascade. </p>
+    <p>La visite comprend également l'exploration d'une grotte, rendant l'expérience à la fois naturelle et éducative.</p>
+    
+  </em>
+</div>
+  <h2>Points d'intérêt</h2>
+  <div class="point">
+    <li>Cascade de 45 mètres de hauteur</li>
+    <li>Grotte aménagée sur 250 mètres (seule grotte ouverte au public en Haute-Savoie)</li>
+    <li>Tyroliennes de 150 mètres survolant la cascade (en option)</li>
+    <li>Musée avec maquette et vidéos sur la vie d'autrefois</li>
+    <li>Paysage forestier luxuriant le long du ruisseau de Saint-Ruph</li>
+    <li>Vue panoramique depuis le sommet de la cascade</li>
 
-  <div class="info-box">
-    <div class="info-title">Description</div>
-    <p>La randonnée vers la Cascade de Seythenex est une belle balade familiale qui vous mènera à travers une forêt luxuriante jusqu'à une magnifique chute d'eau de 45 mètres de haut. Le chemin est bien aménagé et offre une expérience rafraîchissante, particulièrement appréciable lors des chaudes journées d'été.</p>
-    <p>Le parcours débute au parking de Seythenex et suit un sentier balisé à travers la forêt. Vous traverserez des ponts en bois au-dessus de petits ruisseaux avant d'atteindre la spectaculaire cascade. L'eau qui jaillit de la falaise crée un spectacle naturel impressionnant et une atmosphère apaisante.</p>
   </div>
-
-  <div class="info-box">
-    <div class="info-title">Conseils</div>
-    <ul>
-      <li>Portez des chaussures de marche confortables avec une bonne adhérence, car le sentier peut être glissant par endroits.</li>
-      <li>Apportez de l'eau et un en-cas, même si la randonnée est courte.</li>
-      <li>N'oubliez pas votre appareil photo pour capturer la beauté de la cascade.</li>
-      <li>Le site peut être très fréquenté en été, essayez d'y aller tôt le matin ou en fin d'après-midi pour plus de tranquillité.</li>
-      <li>Respectez l'environnement en ne laissant aucun déchet et en restant sur les sentiers balisés.</li>
-    </ul>
+  <h2>Détail du trajet</h2>
+  <div class="trajet">
+    <li>Départ du grand parking aménagé à l'entrée du site</li>
+    <li>Suivre le chemin balisé menant à la cascade</li>
+    <li>Possibilité de monter jusqu'au sommet de la cascade par des passerelles</li>
+    <li>Visite guidée de la grotte (40 minutes, température constante de 10°C)</li>
+    <li>Option de faire les tyroliennes au-dessus de la cascade</li>
+    <li>Retour par le même chemin en passant par le musée</li>
+    
   </div>
+  <h2>Itinéraire</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11140.013765361964!2d6.2785036281138265!3d45.73102579778139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478bea820cc52891%3A0xb6884d17e02e031b!2sGrotte%20et%20Cascade%20de%20Seythenex!5e0!3m2!1sfr!2sfr!4v1728570202156!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-  <div class="info-box">
-    <div class="info-title">Accès</div>
-    <p>Depuis Annecy, prenez la D1508 en direction de Faverges. À Faverges, suivez la D2508 en direction d'Ugine. Après environ 7 km, tournez à gauche sur la D132 en direction de Seythenex. Suivez les panneaux indiquant "Cascade de Seythenex" jusqu'au parking.</p>
-  </div>
-
-  <div class="info-box">
-    <div class="info-title">Carte</div>
-    <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=6.2884,45.7111,6.3084,45.7311&layer=mapnik" width="800" height="400"></iframe>
-  </div>
-
-  <a href="../" class="button">Retour à la liste des randonnées</a>
+  <a href="https://yo-zen.github.io/rando-annecy/" class="back-btn">Retour à la liste des randonnées</a>
 
   <script>
-    // Vous pouvez ajouter ici du JavaScript pour améliorer l'interactivité de la page
-    // Par exemple, une galerie d'images, un calculateur de temps de marche, etc.
+    // Ici, vous pouvez ajouter du JavaScript pour rendre la page plus interactive
+    // Par exemple, vous pourriez ajouter une galerie d'images, un système de notation, ou des commentaires d'autres randonneurs
   </script>
 </body></html>

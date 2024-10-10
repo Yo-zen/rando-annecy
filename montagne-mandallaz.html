@@ -1,7 +1,7 @@
 <html><head><base href="https://yo-zen.github.io/rando-annecy/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Randonnée : Montagne de la Mandallaz</title>
+<title>Montagne de la Mandallaz</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -11,6 +11,7 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
+    text-align: center;
   }
   h1, h2 {
     color: #2c3e50;
@@ -23,21 +24,52 @@
     margin-bottom: 20px;
   }
   .info-box {
-    background-color: #ecf0f1;
-    border-radius: 5px;
-    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
   .info-item {
-    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
   }
-  .info-label {
-    font-weight: bold;
-    color: #34495e;
+  .info-item svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    fill: #3498db;
   }
   .description {
-    text-align: justify;
+    background-color: #1aa6dd;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+     }
+  .trajet {
+    background-color: #4f1097;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .point {
+    background-color: #0de43c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
   .map {
     width: 100%;
@@ -45,68 +77,87 @@
     border: none;
     border-radius: 10px;
   }
-  .back-link {
+  .back-btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
     background-color: #3498db;
     color: white;
     text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
+    margin-top: 20px;
     transition: background-color 0.3s;
   }
-  .back-link:hover {
+  .back-btn:hover {
     background-color: #2980b9;
   }
 </style>
 </head>
 <body>
-  <h1>Randonnée : Montagne de la Mandallaz</h1>
   
-  <img src="images/montagne-mandallaz.jpg" alt="Vue panoramique de la Montagne de la Mandallaz" class="hero-image" width="800" height="300">
+    <h1>Randonnée à la Montagne de la Mandallaz</h1>
+  
+  <img src="images/montagne-mandallaz.jpg" alt="Vue magnifique de la Cascade d'Angon, chute d'eau spectaculaire entourée de végétation luxuriante" class="hero-image" width="800" height="300">
   
   <div class="info-box">
-    <div class="info-item"><span class="info-label">Difficulté :</span> Moyen</div>
-    <div class="info-item"><span class="info-label">Distance :</span> 8,5 km</div>
-    <div class="info-item"><span class="info-label">Dénivelé :</span> 450 m</div>
-    <div class="info-item"><span class="info-label">Durée :</span> 3h30 - 4h</div>
-    <div class="info-item"><span class="info-label">Altitude max :</span> 937 m</div>
-    <div class="info-item"><span class="info-label">Point de départ :</span> Parking de la Mandallaz, Sillingy</div>
+    <div class="info-grid">
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM12 7V3H2v18h20V7H12zM10 15H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 8h-6v-2h6v2zm0-4h-6V9h6v2z"/></svg>
+        <span>Difficulté : moyenne</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+        <span>Durée : 4 h </span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+        <span>Distance : 8,5 kms</span>
+      </div>
+      <div class="info-item">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+        <span>Dénivelé : 937 m</span>
+      </div>
+    </div>
   </div>
-
   <h2>Description</h2>
   <div class="description">
+   
+  <em>
     <p>La randonnée de la Montagne de la Mandallaz est une belle balade offrant des panoramas exceptionnels sur les Alpes et le lac d'Annecy. Cette randonnée de difficulté moyenne vous emmène à travers des forêts de hêtres et de sapins avant d'atteindre les crêtes dégagées de la Mandallaz.</p>
     <p>Au sommet, vous pourrez profiter d'une vue à 360° sur les massifs environnants, notamment le Parmelan, la Tournette, le Semnoz, et par temps clair, le Mont-Blanc. C'est également un excellent spot pour observer les rapaces en vol.</p>
     <p>Le sentier est bien balisé et accessible à la plupart des randonneurs, mais certaines sections peuvent être un peu raides. Prévoyez de bonnes chaussures de randonnée et suffisamment d'eau, surtout en été.</p>
-  </div>
+ 
+  </em>
+</div>
+  <h2>Points d'intérêt</h2>
+  <div class="point">
+    <li>Tête de la Mandallaz (900 m) - point culminant et belvédère</li>
+    <li>Grotte du Curé</li>
+    <li>Grotte du Maquis (abri de résistants pendant la Seconde Guerre Mondiale)</li>
+    <li>Rocher du Maquis</li>
+    <li>Miroir de faille dans une ancienne carrière</li>
+    <li>Vues panoramiques sur le lac d'Annecy, la chaîne des Alpes et la Montagne d'Age</li>
+    <li>Patrimoine spéléologique et historique</li>
+    <li>On voit chez nous !!</li>
+    
 
-  <h2>Itinéraire</h2>
-  <ol>
+  </div>
+  <h2>Détail du trajet</h2>
+  <div class="trajet">
     <li>Départ du parking de la Mandallaz à Sillingy</li>
     <li>Suivre le sentier balisé en direction du sommet</li>
     <li>Traversée de la forêt avec quelques points de vue intermédiaires</li>
     <li>Arrivée sur les crêtes de la Mandallaz</li>
     <li>Atteinte du sommet et de la table d'orientation</li>
     <li>Redescente par le même itinéraire ou en boucle par le versant ouest</li>
-  </ol>
+      
+  </div>
+  <h2>Itinéraire</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11091.084146337414!2d6.08!3d45.97583245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b869ca72bf779%3A0x18a4c4437fcf76c0!2sMontagne%20de%20la%20Mandallaz!5e0!3m2!1sfr!2sfr!4v1728561164786!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-  <h2>Carte</h2>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11138.37589267783!2d6.0291660787573!3d45.94661227910937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478b8e1f1e47f6cd%3A0x40ace6c5a3d2430!2sMontagne%20de%20la%20Mandallaz!5e0!3m2!1sfr!2sfr!4v1652123456789!5m2!1sfr!2sfr" class="map" allowfullscreen="" loading="lazy"></iframe>
-
-  <h2>Conseils</h2>
-  <ul>
-    <li>Portez des chaussures de randonnée adaptées</li>
-    <li>Emportez suffisamment d'eau et un pique-nique</li>
-    <li>Protégez-vous du soleil (chapeau, crème solaire)</li>
-    <li>Vérifiez la météo avant de partir</li>
-    <li>Respectez l'environnement et ne laissez pas de déchets</li>
-  </ul>
-
-  <a href="../" class="back-link">Retour à la liste des randonnées</a>
+  <a href="https://yo-zen.github.io/rando-annecy/" class="back-btn">Retour à la liste des randonnées</a>
 
   <script>
-    // Vous pouvez ajouter ici du JavaScript pour des fonctionnalités interactives
-    // Par exemple, une galerie d'images, un calculateur de temps de parcours, etc.
+    // Ici, vous pouvez ajouter du JavaScript pour rendre la page plus interactive
+    // Par exemple, vous pourriez ajouter une galerie d'images, un système de notation, ou des commentaires d'autres randonneurs
   </script>
 </body></html>

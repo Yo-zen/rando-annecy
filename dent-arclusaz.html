@@ -1,7 +1,7 @@
-<html><head><base href="randonnees/dent-arclusaz">
+<html><head><base href="https://yo-zen.github.io/rando-annecy/">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Randonnée à la Dent d'Arclusaz - Annecy Randonnées</title>
+<title>Randonnée à Dent d'Arclusaz</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -11,31 +11,24 @@
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
-  }
-  header {
-    background-color: #2c3e50;
-    color: white;
     text-align: center;
-    padding: 1rem;
-    margin-bottom: 2rem;
   }
-  h1 {
-    margin-bottom: 0.5rem;
+  h1, h2 {
+    color: #2c3e50;
   }
-  .difficulty {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #e74c3c;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
+  .hero-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 20px;
   }
   .info-box {
-    background-color: white;
+    background-color: #fff;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   .info-grid {
     display: grid;
@@ -47,117 +40,125 @@
     align-items: center;
   }
   .info-item svg {
+    width: 24px;
+    height: 24px;
     margin-right: 10px;
     fill: #3498db;
   }
   .description {
-    text-align: justify;
+    background-color: #1aa6dd;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+     }
+  .trajet {
+    background-color: #4f1097;
+    color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
-  .map-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
+  .point {
+    background-color: #0de43c;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
   }
-  .map-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .map {
     width: 100%;
-    height: 100%;
-    border: 0;
+    height: 400px;
+    border: none;
+    border-radius: 10px;
   }
-  .image-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 2rem;
-  }
-  .image-gallery img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+  .back-btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
     border-radius: 5px;
-    transition: transform 0.3s ease;
+    margin-top: 20px;
+    transition: background-color 0.3s;
   }
-  .image-gallery img:hover {
-    transform: scale(1.05);
+  .back-btn:hover {
+    background-color: #2980b9;
   }
 </style>
 </head>
 <body>
-  <header>
+  
     <h1>Randonnée à la Dent d'Arclusaz</h1>
-    <span class="difficulty">Difficile</span>
-  </header>
-  <img src="images/dent-arclusaz.jpg" alt="Vue panoramique du Lac d'Anterne entouré de montagnes" class="hero-image" width="800" height="400">
+  
+  <img src="images/dent-arclusaz.jpg" alt="Vue magnifique de la Cascade d'Angon, chute d'eau spectaculaire entourée de végétation luxuriante" class="hero-image" width="800" height="300">
+  
   <div class="info-box">
     <div class="info-grid">
       <div class="info-item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"></path></svg>
-        <span>Distance : 12 km</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 21h18v-2H3v2zM12 7V3H2v18h20V7H12zM10 15H4v-2h6v2zm0-4H4V9h6v2zm0-4H4V5h6v2zm10 8h-6v-2h6v2zm0-4h-6V9h6v2z"/></svg>
+        <span>Difficulté : Difficile</span>
       </div>
       <div class="info-item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
         <span>Durée : 6-7 heures</span>
       </div>
       <div class="info-item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M14 2l2.2 2.2L7.1 13.3l-2.2-2.2L14 2zm4.9 1.8L17.2 2L22 6.8l-1.8 1.8-1.3-1.4zM6.3 14.8L2 19.1V22h2.9l4.3-4.3-2.9-2.9z"></path></svg>
-        <span>Dénivelé : 1100 m</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.5 5.5c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zM9.8 8.9L7 23h2.1l1.8-8 2.1 2v6h2v-7.5l-2.1-2 .6-3C14.8 12 16.8 13 19 13v-2c-1.9 0-3.5-1-4.3-2.4l-1-1.6c-.4-.6-1-1-1.7-1-.3 0-.5.1-.8.1L6 8.3V13h2V9.6l1.8-.7"/></svg>
+        <span>Distance : 12 km</span>
       </div>
       <div class="info-item">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"></path></svg>
-        <span>Altitude max : 2041 m</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14 6l-3.75 5 2.85 3.8-1.6 1.2C9.81 13.75 7 10 7 10l-6 8h22L14 6z"/></svg>
+        <span>Dénivelé : 1100 m</span>
       </div>
     </div>
   </div>
-
-  <div class="info-box description">
-    <h2>Description</h2>
+  <h2>Description</h2>
+  <div class="description">
+   
+  <em>
     <p>La Dent d'Arclusaz est une randonnée spectaculaire offrant des vues panoramiques sur les massifs des Bauges et de la Chartreuse. Cette ascension difficile récompense les randonneurs avec des paysages à couper le souffle et une flore alpine variée.</p>
     <p>Le sentier commence dans la forêt et monte progressivement à travers des alpages jusqu'à atteindre une crête rocheuse. La dernière partie de l'ascension est plus technique et nécessite une bonne condition physique. Au sommet, vous serez récompensé par une vue à 360° sur les Alpes environnantes.</p>
-  </div>
+    
 
-  <div class="info-box">
-    <h2>Itinéraire</h2>
-    <ol>
-      <li>Départ du parking du Col du Frêne</li>
-      <li>Suivre le sentier balisé en direction de la Dent d'Arclusaz</li>
-      <li>Traverser la forêt et les alpages</li>
-      <li>Atteindre la crête rocheuse</li>
-      <li>Ascension finale jusqu'au sommet</li>
-      <li>Retour par le même itinéraire</li>
-    </ol>
-  </div>
+    
+  </em>
+</div>
+  <h2>Points d'intérêt</h2>
+  <div class="point">
+      <li>Col du Potat (1351 m)</li>
+      <li>Pierre Besse (1730 m)</li>
+      <li>Col de Cochette (1955 m)</li>
+      <li>Sommet de la Dent d'Arclusaz (2041 m) avec sa grande croix métallique</li>
+      <li>Vue panoramique sur la Plaine de l'Isère, le Massif des Bauges, Belledonne et la Chartreuse</li>
+      <li>Vallon d'Arclusaz et ses chalets d'alpage</li>
+    
 
-  <div class="info-box">
-    <h2>Conseils</h2>
-    <ul>
-      <li>Partir tôt le matin pour éviter la chaleur</li>
-      <li>Emporter suffisamment d'eau (minimum 2L par personne)</li>
-      <li>Prévoir des vêtements chauds, le vent peut être fort au sommet</li>
-      <li>Chaussures de randonnée à tige haute recommandées</li>
-      <li>Bâtons de marche conseillés pour la descente</li>
-      <li>Vérifier la météo avant de partir, éviter par temps orageux</li>
-    </ul>
   </div>
+  <h2>Détail du trajet (par le col du frêne)</h2>
+  <div class="trajet">
+      <li>Le large sentier débute derrière le Mémorial (panneaux) et monte NE en sous-bois. Peu après la clairière de Pré Ballet, à la côte 1.065 m, le sentier coupe la piste pastorale (interdite à la circulation) qui part du village de Routhennes et dessert le Chalet du Potat.</li>
+      <li>De ce point, on peut continuer sur le sentier (itinéraire conseillé) qui suit la Crête de la Via ou emprunter la piste jusqu’au chalet d’alpage (on peut réserver cette variante pour la descente). Le sentier de crête, large et bien tracé, permet d’entrevoir les sommets de l’W du Massif des Bauges (Mont Margeriaz, Mont Morbié, Rochers de la Bade, Mont Colombier) tout au long de la montée et rejoint la piste à proximité du Chalet du Potat (1.382 m).</li>
+      <li>Après une courte descente, la piste se termine au Col du Potat qui s’ouvre sur les alpages des villages de Sainte-Reine et d’Epernay. Du Col (1.351 m - panneaux), l’itinéraire se poursuit E sur un sentier, toujours bien tracé, qui monte en lacets dans une pente boisée, puis herbeuse. On atteint le rocher isolé de "Pierre Besse" (1.730 m) sous la falaise de l’Arclusaz, puis le sentier continue en lacets, franchit ensuite la croupe et fait une boucle SE avant de revenir NE pour traverser en direction du Col de Cochette (1.955 m), dont l’échancrure dans la falaise est bien visible, à l’aplomb de la petite croix qui marque l’antécime de la Dent d’Arclusaz.</li>
+      <li>Le sentier se faufile dans cette faille (prudence en cas de temps humide car la terre et les rochers « lissés » et instables rendent la progression malaisée) qui se rétrécit et se redresse nettement sur quelques mètres (présence d’un câble, bien utile) avant de déboucher sur l’arête.</li>
+      <li>De ce point, le sentier s’oriente S en direction du sommet et traverse une zone pentue, mi-herbeuse, mi-rocheuse, qui réclame la plus grande attention (les passages les plus ardus sont sécurisés par des main-courantes câblées - remises en état en 2016)</li>
+      <li>On rejoint la sente qui arrive E du Vallon d’Arclusaz (itinéraire difficile) puis on atteint en quelques minutes la grande Croix métallique (et haubanée) qui matérialise le sommet de la Dent d’Arclusaz (2.041 m). Il est possible de marquer son passage en laissant un mot sur le carnet à l’abri dans un "tuyau" sous la croix.</li>
+      <li>Du sommet, vue « époustouflante » sur la Plaine de l’Isère, les principaux sommets du Massif des Bauges (Mont Colombier, Mont Pécloz, Mont d’Armène, Pointe d’Arcalod, Mont Trélod), le Massif de Belledonne, la Chartreuse et le beau Vallon d’Arclusaz et ses chalets d’alpage.</li>
+      <li>Retour par le même itinéraire jusqu’au Chalet du Potat puis, au choix, par le sentier emprunté à l’aller ou par la piste jusqu’en amont de Pré Ballet.</li>
+    
+  </div>
+  <h2>Itinéraire</h2>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22383.59477380758!2d6.146384387909923!3d45.64646146593392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba3b7c7b4b6a9%3A0x408ab2ae4bfb300!2sDent%20d&#39;Arclusaz!5e0!3m2!1sfr!2sfr!4v1653338529784!5m2!1sfr!2sfr" class="map" allowfullscreen="" loading="lazy"></iframe>
 
-  <div class="info-box">
-    <h2>Carte</h2>
-    <div class="map-container">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22383.59477380758!2d6.146384387909923!3d45.64646146593392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478ba3b7c7b4b6a9%3A0x408ab2ae4bfb300!2sDent%20d&#39;Arclusaz!5e0!3m2!1sfr!2sfr!4v1653338529784!5m2!1sfr!2sfr" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </div>
-
-  <div class="image-gallery">
-    <img src="dent-arclusaz-1.jpg" alt="Vue panoramique depuis le sommet de la Dent d'Arclusaz" width="200" height="200">
-    <img src="dent-arclusaz-2.jpg" alt="Sentier escarpé menant au sommet" width="200" height="200">
-    <img src="dent-arclusaz-3.jpg" alt="Flore alpine le long du chemin" width="200" height="200">
-    <img src="dent-arclusaz-4.jpg" alt="Randonneurs sur la crête rocheuse" width="200" height="200">
-  </div>
+  <a href="https://yo-zen.github.io/rando-annecy/" class="back-btn">Retour à la liste des randonnées</a>
 
   <script>
-    // Vous pouvez ajouter ici du JavaScript pour améliorer l'interactivité,
-    // comme un diaporama pour les images ou des infobulles pour les icônes.
+    // Ici, vous pouvez ajouter du JavaScript pour rendre la page plus interactive
+    // Par exemple, vous pourriez ajouter une galerie d'images, un système de notation, ou des commentaires d'autres randonneurs
   </script>
 </body></html>
